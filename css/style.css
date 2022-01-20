@@ -2,7 +2,7 @@
 /* ---------- Splash Page Specific Styles ----------- */
 /* ================================================== */
 body {
-	background: #FFF url('../images/bg.png') top center repeat;
+	background: #fff url("../images/bg.png") top center repeat;
 }
 
 #content-container {
@@ -16,13 +16,62 @@ h1 {
 	height: 235px;
 	text-indent: -9999px;
 	margin: 125px auto 0 auto;
-	background-image: url("../images/bg-cd-logo-splash.png"); 
+	background-image: url("../images/bg-cd-logo-splash.png");
+}
+
+#cd-headline-container {
+	position: relative;
+}
+
+h2.cd-headline,
+h2.cd-headline-two {
+	font-family: "Open Sans Condensed", sans-serif;
+	font-size: 27px;
+	text-transform: uppercase;
+	text-align: center;
+	margin: -14px 0 0 0;
+	font-weight: 700;
+	background: -webkit-linear-gradient(#9c9c9c, #000);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h2.cd-headline span,
+h2.cd-headline-two span {
+	font-weight: 700;
+	background: -webkit-linear-gradient(#d1222b, #6d080e);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h2.cd-headline-two {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#cd-headline-container .copyright {
+	font-size: 12px;
+	position: absolute;
+	background: -webkit-linear-gradient(#9c9c9c, #000);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h3.cd-date {
+	font-family: "Open Sans Condensed", sans-serif;
+	font-size: 20px;
+	color: #666;
+	text-align: center;
+	text-transform: uppercase;
+	color: #c0c0c0;
+	font-weight: 300;
 }
 
 #services-container {
 	position: relative;
-	width: 165px;
-	margin: -10px auto 0 auto;
+	width: 225px;
+	margin: 15px auto 0 auto;
 }
 
 #services-container a {
@@ -31,67 +80,48 @@ h1 {
 	width: 75px;
 	height: 75px;
 	text-indent: -9999px;
-	filter: gray; /* IE5+ */
-	-webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-	-webkit-transition: all .6s ease-in-out; 
-	-moz-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-	-moz-transition: all .6s ease-in-out;
-	transition: all .3s ease-in-out; 
-}
-
-#services-container a:hover {
-	-webkit-filter: grayscale(0);
-    -moz-filter: grayscale(0);
-    filter: none;
-}
-
-h2.cd-headline {
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 27px;
-	text-transform: uppercase;
-	text-align: center;
-	margin: -14px 0 0 0;
-	font-weight: 700;
-	background: -webkit-linear-gradient(#9C9C9C, #000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-h2.cd-headline span {
-	font-weight: 700;
-	background: -webkit-linear-gradient(#d1222b, #6d080e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-h3.cd-date {
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 20px;
-	color: #666;
-	text-align: center;
-	text-transform: uppercase;
-	color: #C0c0c0;
-	font-weight: 300;
-}
-
-#services-container  {
-	width: 165px;
-	margin: 15px auto 0 auto;
-}
-
-#services-container a#drupal {
+	top: 0;
+	transition: all 0.5s;
 	cursor: pointer;
 	float: left;
-	background-image: url("../images/bg-drupal-logo.png"); 
+	filter: gray; /* IE5+ */
+	-webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+	-moz-transition: all 0.6s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 #services-container a#wordpress {
-	cursor: pointer;
-	float: right;
-	background-image: url("../images/bg-wordpress-logo.png"); 
+	background-image: url("../images/bg-wordpress-logo.png");
 	opacity: 0.7;
 }
 
 #services-container a#wordpress:hover {
 	opacity: 1;
+}
+
+#services-container a#drupal {
+	background-image: url("../images/bg-drupal-logo.png");
+	opacity: 0.7;
+}
+
+#services-container a#drupal:hover {
+	opacity: 1;
+}
+
+#services-container a#shopify {
+	background-image: url("../images/bg-shopify-logo.png");
+	opacity: 0.7;
+}
+
+#services-container a#shopify:hover {
+	opacity: 1;
+}
+
+#services-container a:hover {
+	top: -5px;
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	filter: none;
 }
